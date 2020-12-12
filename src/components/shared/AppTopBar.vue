@@ -1,43 +1,22 @@
 <template>
-  <v-card class="apptopbar">
-    <v-app-bar app
-      absolute
-      color="#43a047"
-      dark
-      shrink-on-scroll
-      prominent
-      src="https://www.thebuckingham.com.au/wp-content/uploads/2018/11/christmas-1.jpg"
-      fade-img-on-scroll
-      scroll-target="#scrolling-techniques-5"
-      scroll-threshold="500"
-    >
-      <template v-slot:img="{ props }">
-        <v-img
-          v-bind="props"
-          gradient="to top right, rgba(55,236,186,.7), rgba(255,0,0,.7)"
-        ></v-img>
-      </template>
-
+  <div class="apptopbar">
+    <v-app-bar
+     app 
+     color="#ff0000" 
+     dense 
+     dark
+     src="https://www.thebuckingham.com.au/wp-content/uploads/2018/11/christmas-1.jpg"
+     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-
       <v-toolbar-title>Natal Solidário</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-  
     </v-app-bar>
-    
-      <v-container style="height: 1500px;"></v-container>
-       <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
           active-class="red--text text--accent-4"
         >
-          <router-link to="/">
+         <router-link to="/">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-home</v-icon>
@@ -45,7 +24,7 @@
               <v-list-item-title>Início</v-list-item-title>
             </v-list-item>
           </router-link>
-          <router-link to="/Usuario">
+          <router-link to="/UserPage">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
@@ -64,7 +43,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-  </v-card>
+  </div>
 </template>
 
 <script>
