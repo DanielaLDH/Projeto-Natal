@@ -44,7 +44,7 @@
               </td>
               <td class="text-right">
                   <v-card class="ocupa-cem-percento-pai">
-                      <span class="letter-message">{{ child.description }} </span>
+                      <div class="letter-message">{{ child.description }} </div>
                   </v-card>
                 
               </td>
@@ -103,5 +103,7 @@ export default {
 }
 .letter-message {
   font-size: 10px;
+  width: 50%;
+
 }
 </style>
