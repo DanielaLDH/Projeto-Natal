@@ -12,6 +12,7 @@ const routes = [
     name: 'Inicio',
     component: Inicio
   },
+
   {
     path: '/UserPage',
     name: 'UserPage',
@@ -24,10 +25,7 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+const router = new VueRouter({routes
 })
 
 export default router
