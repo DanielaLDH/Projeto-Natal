@@ -45,7 +45,7 @@
               <v-list-item-title>Início</v-list-item-title>
             </v-list-item>
           </router-link>
-          <router-link to="/">
+          <router-link to="/Usuario">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
