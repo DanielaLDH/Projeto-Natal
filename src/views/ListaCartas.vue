@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div class="lista-cartas">
-      <h2 class="text-h5 text-center mb-3 mt-5">Lista de Cartinhas</h2>
+      <h2 class="text-h5 text-center mb-3 mt-5">Lista de Cartinhas 🎁</h2>
 
       <v-simple-table>
         <template v-slot:default>
