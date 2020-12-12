@@ -41,7 +41,7 @@
       class="mr-4"
       @click="validate"
     >
-      Validate
+      Cadastrar
     </v-btn>
 
     <v-btn
@@ -49,14 +49,14 @@
       class="mr-4"
       @click="reset"
     >
-      Reset Form
+      Apagar
     </v-btn>
 
     <v-btn
       color="warning"
       @click="resetValidation"
     >
-      Reset Validation
+      Ajude Agora
     </v-btn>
   </v-form>
   
