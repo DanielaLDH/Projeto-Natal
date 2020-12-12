@@ -48,24 +48,39 @@
                         <th colspan="8" class="text-left"> <!-- O ' colspan="2" ' é para que a palavra 'Clube' ocupe 2 colunas (que tem posição e que tem nome do clube)-->
                             Crianças
                         </th>
-                        <th class="text-right">
+                        <th colspan="4" class="text-right">
                             Cartinha
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="(child, index) of childLetters" :key="index">
-        
                         <td colspan="8" class="text-left"> 
-                            <v-img class="mb-4" :src="child.photo" style="width:100px;"></v-img>
+                            <v-img class="mb-4" :src="child.photo" style="width:130px;"></v-img>
                             <br/>
                             <span class="child-name">{{ child.name }}</span>
                             <br/>
                             <span class="address">{{ child.address }}</span>
+
+                        <!--
+                            <v-simple-table>
+                                <tr>
+                                    <v-img class="mb-4" :src="child.photo" style="width:130px;"></v-img>
+                                </tr>
+                                <tr>
+                                    <span class="child-name">{{ child.name }}</span>
+                                </tr>
+                                <tr>
+                                    <span class="address">{{ child.address }}</span>
+                                </tr>
+                            </v-simple-table>
+                        -->
+                            
                         </td>
-                        <td class="text-right"> 
+                        <td class="text-right" colspan="4"> 
                             <span class="letter-message">{{ child.description}} </span>
                         </td>
+
                     </tr>
                 </tbody>
                 </template>
