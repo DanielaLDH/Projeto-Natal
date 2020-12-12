@@ -16,8 +16,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(child, index) of childLetters" :key="index">
-              
+            <tr
+              v-for="(child, index) of childLetters"
+              :key="index"
+            >
+
                 <td class="text-left" colspan="6">
                   <v-img
                     class="mb-4"
@@ -28,27 +31,17 @@
                   <strong class="child-name">{{ child.name }}</strong>
                   <br />
                   <span class="address">{{ child.address }}</span>
-
-                  <!--
-                            <v-simple-table>
-                                <tr>
-                                    <v-img class="mb-4" :src="child.photo" style="width:130px;"></v-img>
-                                </tr>
-                                <tr>
-                                    <span class="child-name">{{ child.name }}</span>
-                                </tr>
-                                <tr>
-                                    <span class="address">{{ child.address }}</span>
-                                </tr>
-                            </v-simple-table>
-                        -->
+                  <br/><br/>
                 </td>
-                <td class="text-right">
-                  <v-card class="">
+                <td>
+                  <v-card>
                     <span class="letter-message">{{ child.description }}</span>
                   </v-card>
+                  <br/>
+                  <button class="button" @click="enviaPresenteMensagem()">Clique para dar um presente para <span>{{ child.name }}</span> </button>
+                  <br/><br/>
                 </td>
-              
+
             </tr>
           </tbody>
         </template>
@@ -86,15 +79,14 @@ export default {
 
   methods: {
     //Dentro de methods estão as funções que utilizaremos no componente. Cada nova função deve ser separada por uma vírgula.
+    enviaPresenteMensagem(){
+      alert("Que bom que você escolheu ser um Papai/Mamãe Noel!")
+    }
   },
 };
 </script>
 
 <style scoped>
-.espaco-linha {
-  padding-bottom: 50px;
-}
-
 .child-name {
   font-size: 10px;
 }
@@ -103,5 +95,12 @@ export default {
 }
 .letter-message {
   font-size: 10px;
+}
+
+.button {
+  background-color: darkgrey;
+  margin: 1px solid black;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.479);
+  border-radius: 5px;
 }
 </style>
