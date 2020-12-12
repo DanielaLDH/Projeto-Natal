@@ -17,18 +17,19 @@
           </thead>
           <tbody>
             <tr v-for="(child, index) of childLetters" :key="index">
-              <td class="text-left" colspan="6">
-                <v-img
-                  class="mb-4"
-                  :src="child.photo"
-                  style="width:130px;"
-                ></v-img>
-                <br />
-                <strong class="child-name">{{ child.name }}</strong>
-                <br />
-                <span class="address">{{ child.address }}</span>
+              
+                <td class="text-left" colspan="6">
+                  <v-img
+                    class="mb-4"
+                    :src="child.photo"
+                    style="width:150px;"
+                  ></v-img>
+                  <br />
+                  <strong class="child-name">{{ child.name }}</strong>
+                  <br />
+                  <span class="address">{{ child.address }}</span>
 
-                <!--
+                  <!--
                             <v-simple-table>
                                 <tr>
                                     <v-img class="mb-4" :src="child.photo" style="width:130px;"></v-img>
@@ -41,13 +42,13 @@
                                 </tr>
                             </v-simple-table>
                         -->
-              </td>
-              <td class="text-right">
-                  <v-card class="ocupa-cem-percento-pai">
-                      <div class="letter-message">{{ child.description }} </div>
+                </td>
+                <td class="text-right">
+                  <v-card class="">
+                    <span class="letter-message">{{ child.description }}</span>
                   </v-card>
-                
-              </td>
+                </td>
+              
             </tr>
           </tbody>
         </template>
@@ -90,9 +91,8 @@ export default {
 </script>
 
 <style scoped>
-
-.ocupa-cem-percento-pai{
-    width: 100%;
+.espaco-linha {
+  padding-bottom: 50px;
 }
 
 .child-name {
@@ -103,7 +103,5 @@ export default {
 }
 .letter-message {
   font-size: 10px;
-  width: 50%;
-
 }
 </style>
