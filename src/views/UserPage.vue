@@ -56,7 +56,7 @@
       color="warning"
       @click="resetValidation"
     >
-      Ajude Agora
+      Ajude
     </v-btn>
   </v-form>
   
